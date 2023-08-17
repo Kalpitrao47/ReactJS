@@ -1,0 +1,13 @@
+1-Inception-
+Whatever you write inside a script tag is the javascript.
+ReactElement is an Object.
+ReactElement(Object) =>Html(Browser Understand)
+
+2-Igniting Our App:
+First Create a New Repo in github
+Initialize git in your local machine in vs code.      ---- git init
+git branch -M main
+git add .
+git commit -m "Initial Commit"
+git remote add origin https://github.com/Kalpitrao47/ReactJS.git
+git push -u origin main

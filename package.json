@@ -1,0 +1,25 @@
+{
+  "name": "namaste-react",
+  "version": "1.0.0",
+  "description": "This is namaste react by Kalpit Raorane",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kalpitrao47/ReactJS.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "Kalpit Raorane",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kalpitrao47/ReactJS/issues"
+  },
+  "homepage": "https://github.com/Kalpitrao47/ReactJS#readme",
+  "devDependencies": {
+    "parcel": "^2.9.3"
+  }
+}
