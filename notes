@@ -78,3 +78,55 @@ Create Scripts in package.json for start and build
   },
 
 
+Jsx is not html in js. Infact Jsx is html like syntax.
+
+Babel job is to convert jsx to react code.
+Babel is a javascript compiler.
+
+Go to babels offical website and type this code:-
+const jsxheading = <h1>USing JSx</h1>
+
+It will convert to React.createElement as we did earlier.
+
+How many Components are there in React?
+//Class Based Components
+//Functional Based Components
+
+React Functional Component:-
+A Function which is returning a jsx is a Functional Component.
+
+The below 2 functional components are both one and the same.
+
+1* const HeaderComponent = () =>{
+    return (
+    <h1>USing Functional Component</h1>
+    )
+}
+
+2* const HeaderComponent = () => (
+  <h1>USing Functional Component</h1>
+  )
+
+
+Now Call the function or component inside another Component
+const TitleComponent = () =>{
+    return (
+    <h1>USing Functional Component Title</h1>
+    )
+}
+
+
+const HeaderComponent = () =>{
+    return (
+        <>     
+        {TitleComponent()}                                ------------First method 
+        {TitleComponent()}                                
+         {/* <TitleComponent/> */}                        ------------Second method
+    <h1>USing Functional Component</h1>
+    </>
+
+    )
+}
+
+
+

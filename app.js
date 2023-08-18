@@ -25,7 +25,31 @@ import ReactDOM from "react-dom/client";
 const jsxheading =( <h1 className="head">USing JSx</h1>);
 
 
+//React Components
+//Class Based Components
+//Functional Based Components
+
+const TitleComponent = () =>{
+    return (
+    <h1>USing Functional Component Title</h1>
+    )
+}
+
+
+const HeaderComponent = () =>{
+    return (
+        <>     
+        {TitleComponent()} 
+        {TitleComponent()}   
+         {/* <TitleComponent/> */}
+    <h1>USing Functional Component</h1>
+    </>
+
+    )
+}
 
 const child = ReactDOM.createRoot(document.getElementById("root"));
 
-child.render(jsxheading);
+child.render(<HeaderComponent/>);
+
+
