@@ -14,10 +14,22 @@ import  ReactDOM  from "react-dom/client";
     </div>
 </div> */}
 
-const parent = React.createElement("div", {id:"parent"},React.createElement("div", {id:"child"},React.createElement("h1", {}, "I am An h2 Tag")))
+// const parent = React.createElement("div", {id:"parent"},React.createElement("div", {id:"child"},React.createElement("h1", {}, "I am An h2 Tag")))
 
-const child  =  ReactDOM.createRoot(document.getElementById("root"))
+// const child  =  ReactDOM.createRoot(document.getElementById("root"))
 
-child.render(parent)
+// child.render(parent)
 
+
+
+//React element
+
+
+const jsxheading = (
+<h1 className="head">USing JSx</h1>
+)
+
+const child = ReactDOM.createRoot(document.getElementById("root"))
+
+child.render(jsxheading)
 
