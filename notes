@@ -11,3 +11,70 @@ git add .
 git commit -m "Initial Commit"
 git remote add origin https://github.com/Kalpitrao47/ReactJS.git
 git push -u origin main
+
+npm init
+package.json is the configuration for the npm.
+
+We will use Parcel library in our app. 
+npm install -D parcel             (dev dependency)
+
+There are 2 types of dependency that we can install.
+>dev dependency-(Generally required in development phase).
+>Normal dependency. 
+
+What is package.json?
+->Its a configuration for npm. It keeps a track of what version of that package is installed in our system. 
+
+What is package-lock.json?
+->It keeps the track of exact versions of all the dependencies.
+
+What is node_modules?
+->It is like a database of the dependencies or of the packages that our project needs.
+
+Create a .gitignore file to ignore to node_modules
+Add /node_modules inside the .gitignore file
+(Because the node_modules is a big file and have much more dependencies).
+
+npx parcel index.html(hosting our app on server).
+
+Difference between npm and npx 
+npm- Install a package 
+npx- Execute a package
+
+npm install react
+npm i react-dom
+
+Now we no longer need cdn links.
+
+#Parcel
+-Dev Build 
+-Local Server
+-HMR - Hot Module Replacement
+-Caching - Faster Buils
+-Image Optimization
+-Minification
+-Bundling
+-Compress
+-Consistant Hashing
+-Code Splitting
+-Differential Bundling
+-Diagnostic
+-Error Handling
+-https
+
+
+Here we are generating production build-
+npx parcel build index.html
+Then you will get an error. Remove main in package.json.
+
+
+
+3-Laying the Foundation
+Create Scripts in package.json for start and build 
+"scripts": {
+    "start":"parcel index.html",
+    "build":"parcel build index.html",
+    "test": "jest"
+  },
+
+
