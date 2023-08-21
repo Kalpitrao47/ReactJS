@@ -130,3 +130,13 @@ const HeaderComponent = () =>{
 
 
 
+4-Talk is Cheap Show me the Code.
+What is props in react?
+->When you have to dynamically pass in some data to a component,you pass it as a prop.
+->Passing props to a Component is just like passing argument to a function.
+
+Config driven UI.
+Means according to the data given from the backend the UI is getting changed.
+
+
+

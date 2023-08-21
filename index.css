@@ -27,8 +27,7 @@
 .res-card{
     width: 200px;
     height: 300px;
-    
-    padding: 5px;
+    padding: 70px;
     border-radius: 10px;
 }
 
@@ -52,4 +51,8 @@
     flex-wrap: wrap;
     padding: 5px;
     margin: 5px;
+}
+
+.cards-container{
+display: flex;
 }
