@@ -56,3 +56,9 @@
 .cards-container{
 display: flex;
 }
+
+.filter-btn{
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px;
+}

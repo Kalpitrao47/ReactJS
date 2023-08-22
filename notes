@@ -138,5 +138,22 @@ What is props in react?
 Config driven UI.
 Means according to the data given from the backend the UI is getting changed.
 
+React official documentation itself says that when mapping dont use index as the keys.
+If you dont have a unique key in the api then we should atleast use index as the key.
 
 
+
+5-Lets Get Hooked
+There are two types of export:-
+-named export 
+-default export
+
+named export is imported like this:-
+import { LOGO_URL } from "../utils/constants";
+
+default export is imported without {}.
+
+#React Hooks
+(Normal Js utility functions)
+-useState() -Superpowerful variable 
+-useEffect()
