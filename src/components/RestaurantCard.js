@@ -2,7 +2,7 @@ import { CDN_URL } from "../utils/constants";
 
 const RestaurantCard = ({ restaurant }) => {
     //   const { cards } = props;
-    console.log("Cards", restaurant);
+    // console.log("Cards", restaurant);
     
     
     return (

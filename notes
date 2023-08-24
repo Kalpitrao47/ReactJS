@@ -157,3 +157,49 @@ default export is imported without {}.
 (Normal Js utility functions)
 -useState() -Superpowerful variable 
 -useEffect()
+
+
+How React works behind the scenes?
+Reconciliation Algorithm (React Fiber)
+
+
+
+6-Exploring the Wrold
+Monolith Architecture-When the apps were developed earlier they were designed using monolith architecture.
+Monolith architecture refers to a software design approach where an entire application is built as a single, self-contained unit. In this architectural style, all the components, modules, and functions of the application are tightly integrated and run as a single codebase. This stands in contrast to microservices architecture, where an application is broken down into smaller, loosely coupled services that communicate with each other.
+
+Microservice Architecture-Different services for different Jobs.
+Microservices architecture is a software design approach where an application is broken down into a collection of small, loosely coupled services that can be developed, deployed, and maintained independently. Each service represents a specific business capability and communicates with other services through well-defined APIs. This approach stands in contrast to monolith architecture, where the entire application is built as a single, integrated unit.
+
+There are 2 ways that can approaches that how webapps or Ui Application fetch the data from the backend.
+1= Page Load->Api Call(Suppose Takes 500ms for the api Call)->Render On UI.
+2= Page Loads->Render the UI->API Call->Render the UI Again.     (Example Skeleton).(Always use the 2nd approach)
+
+-What is Hooks?
+Hooks is a normal Javascript function which react gives us for specific useCases.
+-What is useState?
+useState is used to create State variables.
+-what is useEffect?
+useEffect pass 2 Arguments
+1= Arrow Function 
+2= Dependency Array
+
+Example-useEffect(()=>{}, []);
+()=>{}-------This is the callback function.
+
+When will this useEffect callback function be called?
+-The Callback function will be called after the Component renders.
+Suppose we have the Body Component .Now when the Body Component Loads it will render the component and as soon as the render cycle is finished it will call the callback function.
+
+Now When We fetch data from the Swiggy it is throwing up an erro of CORS-POLICY.
+What is this CORS-POLICY?
+OUr browser block us to call API's from one origin to different origin.(Swiggys api from local host)
+
+Now How to Bypass this Cors?
+Download Cors Chrome Extension.
+-Now we can call Swiggy's Api from our local host......(Amazing)
+
+Shimmer UI-(Search on Google(Skeleton))
+
+
+
