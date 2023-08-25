@@ -60,7 +60,7 @@ display: flex;
 .filter-btn{
     padding: 10px;
     border-radius: 5px;
-    margin: 10px;
+    /* margin: 10px; */
 }
 
 .shimmer-container{
@@ -79,4 +79,8 @@ display: flex;
     padding: 0 20px;
     cursor: pointer;
     border-radius: 10px;
+}
+
+.filter{
+    display: flex;
 }

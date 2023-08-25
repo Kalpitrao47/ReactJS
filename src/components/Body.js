@@ -6,7 +6,9 @@ import Shimmer from "./Shimmer";
 const Body = () => {
   const [filteredRestaurants, setFilteredRestaurants] = useState([]);
   console.log("filteredRestaurants", filteredRestaurants);
+  const [filteredRestaurants2, setFilteredRestaurants2] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [searchText, setSearchtext] = useState("");
 
   useEffect(() => {
     // console.log("UseEffect Called")
@@ -19,10 +21,13 @@ const Body = () => {
         "https://www.swiggy.com/dapi/restaurants/list/v5?lat=19.2813939&lng=72.8788707&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
       );
       const json = await data.json();
-      
-      const restaurants = json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
+
+      const restaurants =
+        json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle
+          ?.restaurants;
       setFilteredRestaurants(restaurants);
-      
+      setFilteredRestaurants2(restaurants);
+
       setIsLoading(false); // Once data is fetched, set isLoading to false
     } catch (error) {
       console.error("Error fetching data:", error);
@@ -33,7 +38,7 @@ const Body = () => {
     const filtered = cards.filter(
       (restaurant) => restaurant.info.avgRating > 4
     );
-    setFilteredRestaurants(filtered);
+    setFilteredRestaurants2(filtered);
   };
 
   // if (filteredRestaurants === 0){
@@ -45,6 +50,33 @@ const Body = () => {
   return (
     <div className="body">
       <div className="filter">
+        <div className="search">
+          <input
+            type="text"
+            className="search-box"
+            value={searchText}
+            onChange={(e) => {
+              setSearchtext(e.target.value);
+            }}
+          ></input>
+          <button
+            onClick={() => {
+              //Filter the Restaurants Cards and filter the UI.
+              console.log(searchText)
+              const filterRes = filteredRestaurants.filter((res)=>{
+                return (
+                  res.info.name.toLowerCase().includes(searchText.toLocaleLowerCase())
+                )
+                
+              })
+
+              setFilteredRestaurants2(filterRes)
+                console.log("Now Check",filteredRestaurants)
+            }}
+          >
+            Search
+          </button>
+        </div>
         <button
           className="filter-btn"
           onClick={handleFilterClick}
@@ -80,7 +112,7 @@ const Body = () => {
           </>
         ) : (
           // Render actual data if isLoading is false
-          filteredRestaurants.map((restaurant) => (
+          filteredRestaurants2.map((restaurant) => (
             <RestaurantCard key={restaurant.info.id} restaurant={restaurant} />
           ))
         )}
