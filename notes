@@ -201,5 +201,16 @@ Download Cors Chrome Extension.
 
 Shimmer UI-(Search on Google(Skeleton))
 
+Whenever state variables update,react triggers a reconciliation cycle(re-renders the component).
+
+
+7-Finding the Path
+
+IF No dependency array in useEffect=>useEffect is called on every render.
+If dependency array is empty then useEffect is called on initial render and just once when the component is rendered for the first time.
+If dependency is [btnReact] => called evrytime when btnReact is updated.
+
+Never use useState inside any condition.
+
 
 
