@@ -210,7 +210,91 @@ IF No dependency array in useEffect=>useEffect is called on every render.
 If dependency array is empty then useEffect is called on initial render and just once when the component is rendered for the first time.
 If dependency is [btnReact] => called evrytime when btnReact is updated.
 
-Never use useState inside any condition.
+Never use useState inside any condition,for loops,functions.
 
+For Creating routing we should go to App.js which is the main file or the root level Component.
+USe createBrowserRouter,RouterProvider,from "react-router-dom";
+
+
+2 Types of Routing in web apps:-
+1*Client Side Routing 
+2*Server Side Routing
+
+Client-Side Routing:
+Client-side routing, also known as "single-page application (SPA) routing," involves managing the routing logic entirely on the client side without making additional requests to the server when the user navigates between different pages or views. In a React.js application, this is typically achieved using libraries like react-router or reach-router.
+
+Advantages of Client-Side Routing:
+Faster User Experience
+Reduced Server Load
+
+
+Server-Side Routing:
+Server-side routing involves the server handling navigation and rendering of different pages based on the URL. When a user requests a new URL, the server responds with the appropriate HTML for that specific route. This approach is common in traditional multi-page applications.
+
+Advantages of Server-Side Routing:
+Better SEO
+
+
+
+8-Lets Get Classy
+Class Based Components
+
+import React from "react";
+
+class UserClass extends React.Component{
+    render () {
+        return (
+            <div className="user-card">
+                <h2>Name: Kalpit Raorane</h2>
+                <h3>Age: 27</h3>
+            </div>
+        )
+    }
+}
+
+export default UserClass;
+
+
+What are React Components Life Cycle methods in the React Class Based Components?
+
+
+Suppose You have 2 Component. The first one is the Parent Class Component and the Second One is the Child Class Component.
+Then It will render as follows:
+First the constructor will be called then the render will be called.
+Now just like we have constructor and render methods we also have componentDidMount() method.
+First Parent Constructor Called, then Parent Render Called, then CHild Constructor Called, then Child Render Called, then Child ComponentDidMount,
+then Parent ComponentDidMount is called.
+
+
+
+
+1********Mounting Phase:
+
+constructor(): The constructor is called when the component is being initialized. It's the right place to set up the initial state and bind event handlers.
+render(): This is where the component's JSX is returned. It's responsible for rendering the UI.
+componentDidMount(): This method is called after the component has been rendered to the DOM. It's a good place to perform side-effects like making API calls or setting up subscriptions.
+
+Now Why the ComponentDidMount is used?
+->It is used to mamke api calls.
+OK Now why we make api calls in componentDidMount?
+Just like we use useEffect to fetch data...And just like in function based component first the Component loads then it renders the component and then makes an api call and then renders again ...... componentDidMount is same like useEffect.
+
+Now what if there are multiple Class Componenets. How will the life Cycle work.
+->First Parent Constructor Called, then Parent Render Called, then CHild Constructor 1 Called, then Child Render 1 Called,then CHild Constructor 2 Called, then Child Render 2 Called, then Child 1 ComponentDidMount and Child 2 ComponentDidMount will be called and then at last
+then Parent ComponentDidMount is called.
+(Also refer the diagram on google "react lifecycle methods diagram")
+
+
+Parent Constructor Called
+Parent Render Called
+
+CHild 1 Constructor Called        Render phase
+Child 1 Render Called             Render phase    
+CHild 2 Constructor Called        Render phase
+Child 2 Render Called             Render phase
+
+Child 1 ComponentDidMount         Commit phase
+Child 2 ComponentDidMount         Commit phase
+Parent ComponentDidMount          Commit phase
 
 
