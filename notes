@@ -277,7 +277,7 @@ componentDidMount(): This method is called after the component has been rendered
 Now Why the ComponentDidMount is used?
 ->It is used to mamke api calls.
 OK Now why we make api calls in componentDidMount?
-Just like we use useEffect to fetch data...And just like in function based component first the Component loads then it renders the component and then makes an api call and then renders again ...... componentDidMount is same like useEffect.
+Just like we use useEffect to fetch data...And just like in function based component first the Component loads then it renders the component and then makes an api call and then renders again ...... componentDidMount is same like useEffect.(but its not equivalent)
 
 Now what if there are multiple Class Componenets. How will the life Cycle work.
 ->First Parent Constructor Called, then Parent Render Called, then CHild Constructor 1 Called, then Child Render 1 Called,then CHild Constructor 2 Called, then Child Render 2 Called, then Child 1 ComponentDidMount and Child 2 ComponentDidMount will be called and then at last
