@@ -298,3 +298,17 @@ Child 2 ComponentDidMount         Commit phase
 Parent ComponentDidMount          Commit phase
 
 
+9-Optimising Our App
+Write Code in a much better way.
+Single Responsibility Principle(Break Down code in Components-Readable,Maintainable,Testable)
+Custom Hooks.
+
+Make Smaller Bundles in our project for large scale applications.If we dont then our large scale application will be slow.
+Chunking 
+Code Splitting
+Dynamic Bundling
+lazy loading
+on demand loading
+dynamic import 
+
+

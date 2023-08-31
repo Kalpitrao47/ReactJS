@@ -3,6 +3,7 @@ import cards from "../utils/mockData";
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
+import useOnlineStatus from "../utils/useOnlineStatus";
 
 const Body = () => {
   const [filteredRestaurants, setFilteredRestaurants] = useState([]);
@@ -41,6 +42,12 @@ const Body = () => {
     );
     setFilteredRestaurants2(filtered);
   };
+
+  const onlineStatus = useOnlineStatus();
+  if (onlineStatus === false )
+    return (
+      <h1>Please Check your internet connection</h1>
+      )
 
   // if (filteredRestaurants === 0){
   //   return (
