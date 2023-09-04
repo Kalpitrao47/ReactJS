@@ -24,21 +24,21 @@ const RestaurantCard = ({ restaurant }) => {
       //   ))}
       // </div>
   
-      <div className="res-container">
-        <div className="res-card">
+      // <div className="res-container">
+        <div className="res-card m-4 p-4 w-[230px] bg-gray-100 hover:bg-gray-400 rounded-lg">
           <img
-            className="res-logo"
+            className="res-logo rounded-lg"
             alt="res-logo"
             src={
                 CDN_URL +
               restaurant.info.cloudinaryImageId
             }
           ></img>
-          <h3>{restaurant.info.name}</h3>
+          <h3 className="font-bold py-2">{restaurant.info.name}</h3>
           <h3>{restaurant.info.cuisines.join(" , ")}</h3>
           <h3>{restaurant.info.avgRating} Stars</h3>
         </div>
-      </div>
+      // </div>
     );
   };
 

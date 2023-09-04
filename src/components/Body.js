@@ -57,17 +57,17 @@ const Body = () => {
 
   return (
     <div className="body">
-      <div className="filter">
-        <div className="search">
+      <div className="filter flex">
+        <div className="search m-4 p-4">
           <input
             type="text"
-            className="search-box"
+            className="border border-solid border-black"
             value={searchText}
             onChange={(e) => {
               setSearchtext(e.target.value);
             }}
           ></input>
-          <button
+          <button className="px-2 py-2 bg-green-100 m-4 rounded-lg"
             onClick={() => {
               //Filter the Restaurants Cards and filter the UI.
               console.log(searchText)
@@ -85,8 +85,9 @@ const Body = () => {
             Search
           </button>
         </div>
+        <div className="search m-4 p-4 flex items-center">
         <button
-          className="filter-btn"
+          className="filter-btn px-2 py-2 bg-gray-100 m-4 rounded-lg"
           onClick={handleFilterClick}
           //     onClick  = {() =>{
           //         console.log("Clicked")
@@ -95,9 +96,10 @@ const Body = () => {
         >
           Top Rated Restaurant
         </button>
+        </div>
       </div>
 
-      <div className="res-container">
+      <div className="res-container flex flex-wrap">
         {/* <RestaurantCard cards={cards[0]} />
           <RestaurantCard cards={cards[1]} />
           <RestaurantCard cards={cards[2]} />
