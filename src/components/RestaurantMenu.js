@@ -3,6 +3,7 @@ import Shimmer from "./Shimmer";
 import { useParams } from "react-router-dom";
 import { MENU_API } from "../utils/constants";
 import useRestaurantMenu from "../utils/useRestaurantMenu";
+import RestaurantCategory from "./RestaurantCategory";
 
 const RestaurantMenu = () => {
   // const [resInfo, setResInfo] = useState(null);
@@ -35,21 +36,27 @@ const RestaurantMenu = () => {
   const { itemCards } =
     resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card;
 
-  console.log("itemCards", itemCards);
+  console.log("itemCards",  resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards);
+
+  const categories = resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter((c)=>c.card?.["card"]?.["@type"] === "type.googleapis.com/swiggy.presentation.food.v2.NestedItemCategory")
+
+  console.log("categories",resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards)
 
   return (
-    <div>
-      <h2>{name}</h2>
-      <h3>
+    <div className="text-center">
+      <h2 className="font-bold my-6 text-2xl">{name}</h2>
+      <h3 className="font-bold text-lg">
         {cuisines?.join(" , ")} - {costForTwoMessage}
       </h3>
-      <ul>
-        {itemCards && itemCards.map((item) => (
-          <div key={item.card.info.id}>
-            <li>{item.card.info.name}</li>
-          </div>
-        ))}
-      </ul>
+
+      {/* Categories Accordian*/}
+
+      {categories.map((category)=>{
+        return (
+         <RestaurantCategory data={category?.card?.card}/>
+        )
+      })}
+      
     </div>
   );
   
