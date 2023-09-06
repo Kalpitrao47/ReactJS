@@ -1,7 +1,10 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import { LOGO_URL } from "../utils/constants";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import UserContext from "../utils/userContext";
+
+
 
 const Header = () => {
   const [btnName,setBtnName] = useState("Login")
@@ -15,6 +18,10 @@ const Header = () => {
     btnName === "Login" ? setBtnName("Logout") : setBtnName("Login")}
 
   const onlineStatus = useOnlineStatus;  
+
+  const data = useContext(UserContext);
+  console.log("data",data)
+
 
 
 
@@ -54,8 +61,11 @@ const Header = () => {
             <li className="px-2">
               Cart</li>
             <li className="px-2"><button className="login" onClick={handleClick}>{btnName}</button></li>
+            {/* <li className="px-2">
+              {loggedInUser}</li> */}
           </ul>
         </div>
+
       </div>
     );
   };

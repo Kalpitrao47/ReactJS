@@ -1,9 +1,10 @@
-import RestaurantCard from "./RestaurantCard";
+import RestaurantCard, {withPromotedLabel} from "./RestaurantCard";
 import cards from "../utils/mockData";
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+
 
 const Body = () => {
   const [filteredRestaurants, setFilteredRestaurants] = useState([]);
@@ -11,6 +12,8 @@ const Body = () => {
   const [filteredRestaurants2, setFilteredRestaurants2] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [searchText, setSearchtext] = useState("");
+
+  const RestaurantCardPromoted = withPromotedLabel(RestaurantCard); 
 
   useEffect(() => {
     // console.log("UseEffect Called")

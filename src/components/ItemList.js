@@ -10,7 +10,7 @@ const ItemList = ({ items }) => {
             <div key={i.id} className="flex justify-between bg-gray-400 shadow-lg p-4 rounded-lg m-2">
               
                 <li>{i.title}</li>
-                {/* <li>{i.itemCards}</li> */}
+                {/* <li>{i.itemCards?.card?.info?.name}</li> */}
                 {/* <div>{i.itemCards}</div> */}
               
                 <span>{">"}</span>

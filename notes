@@ -321,7 +321,25 @@ Material UI,Tailwind CSS, Chara UI,Bootstarp,Ant UI,
 11-Data is the new Oil.
 Higher Order Components
 Means which takes a component and returns a component.
+
+export const withPromotedLabel = (RestaurantCard) =>{
+    return () =>{
+        return (
+            <div>
+            <label>Promoted</label>
+            <RestaurantCard/>
+            </div>
+        )
+    }
+}
+
 Need to learn again Higher Order Component?????????????????????????????????????????
+
+Controlled and UnControlled Components.
+Lifting the State Up.
+props drilling
+Avoid Props drilling(Means passing data from one component to another to another means from parent to children through props)
+Context
 
 
 Accordian UI for Drop Down in swiggy categories.
