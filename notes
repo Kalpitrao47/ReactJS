@@ -341,9 +341,76 @@ props drilling
 Avoid Props drilling(Means passing data from one component to another to another means from parent to children through props)
 Context
 
+Context solves the problem of prop drilling.(Can use anywhere in the app)
+EASY EASY EASY...........Great Content(Please Check Again)
+
 
 Accordian UI for Drop Down in swiggy categories.
 
+
+12-Lets Build Our Store
+Redux Store
+How we can manage state of our application using redux
+data of our apllication using redux
+redux works in the data layer of our application.
+
+Redux store have slices(parts of redux store(Small portion of our redux store))
+Dispatch an action 
+(When you click on the add button it dispatches an action that calls a function(Reducer) and the function modifies the cart(means updates the slice of our redux store))   (Write Data)
+(The function is known as a reducer)
+
+Now we will have to Read Data-(We use Selector)
+Now the selector will modify our react component(Selector will modify the data of the Cart and will add the item to the cart).
+Subscribing to the Store
+
+
+Now code-
+Lets Build Store(Redux Toolkit)
+
+-Install @reduxjs/toolkit and react-redux    ---- npm i @reduxjs/toolkit   , npm i react-redux
+-build our own store ----------inside utils
+-Connect our store to our app
+-Create a Cart Slice
+-dispatch an action
+-Read the data using selector(its a hook in react (useSelector))
+
+
+
+13-Time for the test
+Types of Testing(developer)
+-Unit Testing (One Component)
+-Integration Testing (multiple components talking to each other )
+-End to End Testing
+
+
+Install React Testing Library
+Install jest
+Install Babel Dependencies
+Configure Babel
+Configure Parcel Config to disable default babel transpilation
+Jest Configuration - npx jest --init
+Install jsdom library    -npm install --save-dev jest-environment-jsdom
+Install @babel/preset-react -to make JSX work in test cases
+Include @babel/preset-react inside babel config
+Install @testing-library/jest-dom    ---npm i -D @testing-library/jest-dom 
+
+
+
+
+We will use React testing Library
+React test library use Jests behind the scenes(means Javascript testing framework)
+
+npm install -D @testing-library/react (React Testing Library installation, -D means the dev dependency-we need this in our development)
+npm i -D jest (Jest)
+npm install --save-dev babel-jest @babel/core @babel/preset-env   (We are Babel along with Jest)
+
+Now we will have to configure it in babel.config.js
+module.exports = {
+  presets: [['@babel/preset-env', {targets: {node: 'current'}}]],
+};
+
+npx jest --init
+npm install --save-dev jest-environment-jsdom
 
 
 
