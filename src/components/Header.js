@@ -14,6 +14,7 @@ const Header = () => {
   useEffect(()=>{
     console.log("useEffect Called")
     console.log("useEffect Called")
+    console.log("useEffect Called")
   },[]);
 
   const handleClick  = () =>{
